@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>EulerianSmoke_web</title>
+
+    <meta name="description" content="TurboForge_web">
+    <meta name="keywords" content="TurboForge_web">
+    <meta name="author" content="Diyang">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=59d19899587930b4db9dc12c8b8586882cf35efb">
+
+    <meta name="viewport" content="width=device-wisdth, initial-scale=1">
+
+    <!-- START: Styles -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i%7cWork+Sans:400,500,700" rel="stylesheet" type="text/css">
+    
+    <link rel="stylesheet" href="assets/css/combined.css">
+    <link rel="stylesheet" href="assets/css/button.css">
+
+    <!-- END: Styles -->
+</head>
+
+<style>
+    .titleFont {
+        font-family: Calibri;
+        font-variant: small-caps;
+    }
+
+    .bodyFont {
+        font-family: Calibri;
+        font-variant: normal;
+    }
+    .courier {
+        font-family: 'Courier New', Courier, monospace; margin-bottom: 2cm;
+    }
+    .responsive {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+<body>
+    <div class="nk-main">
+        <div class="nk-gap-4"></div>
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="bg-white">
+					<div class="col-md-12 column" style="margin-top: 0px; text-align: center" >
+                        <h1 style="font-size: 40px"> <span class = "titleFont">
+                            <b>Eulerian Smoke Simulation with Multiple Fields</b><br>
+                        </h1>
+                        <div class="col-md-12 column" style="margin-top: 4px; margin-bottom: 6px">
+                            <h5><span class = "myFont2">Master Thesis</span></h5>
+                        </div>
+                        <div class="col-md-12 column" style="margin-top: 4px; margin-bottom: 6px">
+                            <h6><span class = "myFont2">Diyang Zhang</span></h6>
+                        </div>
+                        <div class="col-md-12 column" style="margin-top: 6px; margin-bottom: 6px">
+                            <h6><span class = "myFont2">Dartmouth College</span></h6>
+                        </div>
+                    </div>
+                    <div class="col-md-12 column"><h6></h6></div> 
+                    <div class="col-md-12 column" style="margin-top: 12px">
+                        <h2><span class = "titleFont">Abstract</span></h2>
+                    </div> 
+                    <div class="col-md-12 column">
+                        <p>
+                            <span class = "bodyFont">                        
+                                Fluid simulation is a cornerstone of computer graphics, enabling the realistic depiction of dynamic phenomena such as smoke, fire, and other gaseous behaviors. This thesis focuses on advancing Eulerian smoke simulation techniques, with a particular emphasis on grid-based simulations that capture intricate vortical structures and fine visual details.
+                                <br><br>
+                                We propose several detail-preserving frameworks that incorporate various scalar and vector fields within the simulation pipeline, including velocity, impulse, and Lamb vectors, along with their decompositions and alternative representations. By mathematically analyzing the properties of impulse, we derive its scalar fields decomposition (ImpSFD), which introduces an alternative numerical explanation, and Vortex-Particles in Impulse (VPImp) which provides enhanced control over fluid turbulence. Additionally, we integrate error correction post-processing techniques and explore advanced numerical schemes to mitigate dissipation and preserve ultra-fine details.
+                                <br><br>
+                                Furthermore, we initiate discussions on the potential of Lamb vectors, supported by preliminary experiments and results. This vector field, both intuitively and empirically, appears to have a deep connection to the essence of turbulence, warranting further investigation.
+                                <br><br>
+                                This thesis underscores the value of these fields in improving the accuracy, control, and visual quality of fluid simulations, offering directions for future research.
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="col-md-12 column" style="margin-top: 12px">
+                        <h2><span class = "titleFont">Paper</span></h2>
+                    </div>
+                    <div class="col-md-12 column">
+                        <p>
+                            <span class = "bodyFont">                        
+                                <a nonsmooth="1" href="assets/docs/Master_Thesis_compressed_20250106.pdf">[Unreleased Version]</a>
+                            </span>
+                        </p>
+                    </div>
+                    
+
+                    <div class="col-md-12 column"><h6></h6></div> 			
+
+                    <div class="col-md-12 column" style="margin-top: -4px; margin-bottom:4px">
+                        <h2><span class = "titleFont">Examples</span></h2>
+                    </div>
+                    <div class="col-md-12 column" style="margin-top: -4px; margin-bottom:-12px">
+                        <h6><span class = "myFont2">Impulse Scalar Fields Decomposition (ImpSFD)</span></h6>
+                    </div>
+                    <div class="col-md-12 column">
+                        <p>
+                            <style>
+                            img {
+                                display: inline-block;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                            </style>
+                            <div class="teaser">
+                                <img src="./assets/image/six_vort_ring_impsfd.gif" alt="graph" style="width:32%;">
+                                <img src="./assets/image/intersect_vort_ring_impsfd.gif" alt="graph" style="width:32%;">
+                                <img src="./assets/image/inkdrop_butting_heads_impsfd.gif" alt="graph" style="width:32%;">
+                            </div>           
+                        </p>
+                    </div>
+
+                    <div class="col-md-12 column" style="margin-top: -4px; margin-bottom:-12px">
+                        <h6><span class = "myFont2">Vortex Particles in Impulse (VPImp)</span></h6>
+                    </div>
+                    <div class="col-md-12 column">
+                        <p>
+                            <style>
+                            img {
+                                display: inline-block;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                            </style>
+                            <div class="teaser">
+                                <img src="./assets/image/inkdrop_pikachu.gif" alt="graph" style="width:32%;">
+                                <img src="./assets/image/vortex_ring_headon_vpimp.gif" alt="graph" style="width:32%;">
+                                <img src="./assets/image/inkdrop_fission_vpimp.gif" alt="graph" style="width:32%;">
+                            </div>           
+                        </p>
+                    </div>
+
+                    <div class="col-md-12 column"><h6></h6></div>
+
+                    <div class="col-md-12 column">
+                        <h2><span class = "titleFont">Citation</span></h2>
+                    </div> 
+                    <div class="col-md-12 column">
+                        <p>
+                            <span class = "bodyFont">                        
+                                Not Available.
+                            </span>
+                        </p>
+                    </div>
+                    <div class="col-md-12 column"><h6></h6></div>
+
+                </div>        
+            </div>
+		<div class="nk-gap-4"></div>
+	</div>
+    <footer class="nk-footer">
+
+
+        <div class="nk-footer-cont">
+            <div class="container text-xs-center">
+
+                <div class="nk-footer-text">
+                    <p>Copyright &copy <a href="https://serev99.github.io/">Diyang Zhang</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+
+
+
+    <!-- START: Scripts -->
+
+    <script src="assets/js/combined.js"></script>
+    
+    <!-- END: Scripts -->
+
+
+</body>
+
+</html>
